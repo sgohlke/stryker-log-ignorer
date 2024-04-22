@@ -1,0 +1,6 @@
+name: Install and test stryker-log-ignorer
+on: [push, workflow_dispatch]
+
+jobs:
+  strykerlogignorer:
+    uses: dreamit-de/workflows/.github/workflows/nodejs-ci-libs.yml@main

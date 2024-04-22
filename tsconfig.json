@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "esModuleInterop": true,
+        "target": "ES2022",
+        "moduleResolution": "Bundler",
+        "sourceMap": true,
+        "outDir": "build",
+        "lib": ["ES2022", "DOM"],
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "declaration": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"],
+            "~/*": ["./*"]
+        }
+    },
+    "include": [
+        "tsup.config.ts",
+        "vitest.config.js",
+        "src/*",
+        "tests/*",
+        "testResources/*"
+    ],
+    "exclude": ["node_modules"]
+}
