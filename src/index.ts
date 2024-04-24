@@ -9,7 +9,12 @@ import {
     PluginKind,
     tokens,
 } from '@stryker-mutator/api/plugin'
+import fs from 'node:fs'
 
+/**
+ * We define the necessary functions and fields for NodePath to be able to provide type safety
+ * in our code.
+ */
 export interface NodePath {
     isExpressionStatement(): boolean
     node: {
@@ -26,13 +31,26 @@ export interface NodePath {
     }
 }
 
-export interface LogIgnorerOptions extends StrykerOptions {
-    loggerClass?: string
+/**
+ * Configuration for @sgohlke/stryker-log-ignorer
+ */
+export interface IgnorerOptions {
+    /**
+     * Specify the object names of the logger objects to be ignored. Defaults to ["console"]
+     */
+    objectNames?: string[]
 }
 
+export interface LogIgnorerOptions extends StrykerOptions {
+    logignore: IgnorerOptions
+}
+
+/*
+ * LogIgnorer provides functionality to ignore log calls for provides logger object names.
+ */
 export class LogIgnorer implements Ignorer {
     public static inject = [commonTokens.logger, commonTokens.options] as const
-    private readonly options: LogIgnorerOptions
+    protected readonly options: LogIgnorerOptions
 
     constructor(
         // eslint-disable-next-line @typescript-eslint/parameter-properties
@@ -43,19 +61,17 @@ export class LogIgnorer implements Ignorer {
     }
 
     shouldIgnore(path: NodePath): string | undefined {
-        const loggerClass = this.options?.loggerClass ?? 'console'
-        this.log?.debug(
-            'LogIgnore Plugin. Path is: ',
-            JSON.stringify(path.node),
-        )
+        const loggerObjectNames = this.options?.logignore?.objectNames ?? [
+            'console',
+        ]
         if (
             path.isExpressionStatement() &&
             path.node.expression.type === 'CallExpression' &&
             path.node.expression.callee.type === 'MemberExpression' &&
             path.node.expression.callee.object.type === 'Identifier' &&
-            path.node.expression.callee.object.name === loggerClass
+            loggerObjectNames.includes(path.node.expression.callee.object.name)
         ) {
-            return `We are not interested in testing ${loggerClass} statements.`
+            return `We are not interested in testing ${loggerObjectNames} statements.`
         }
     }
 }
@@ -75,7 +91,15 @@ export function createLogIgnorerFactory(): {
     return logIgnorerFactory
 }
 
-const createLogIgnorer = createLogIgnorerFactory()
 export const strykerPlugins = [
-    declareFactoryPlugin(PluginKind.Ignore, 'log-ignore', createLogIgnorer),
+    declareFactoryPlugin(PluginKind.Ignore, 'log-ignore', createLogIgnorerFactory()),
 ]
+
+export const strykerValidationSchema: typeof import('../schema/log-ignorer-options.json') =
+    JSON.parse(
+        // eslint-disable-next-line security/detect-non-literal-fs-filename
+        fs.readFileSync(
+            new URL('../schema/log-ignorer-options.json', import.meta.url),
+            'utf8',
+        ),
+    )

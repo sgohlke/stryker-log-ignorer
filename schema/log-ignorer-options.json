@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "title": "LogIgnorerOptions",
+    "additionalProperties": false,
+    "properties": {
+        "logignore": {
+            "description": "Configuration for @sgohlke/stryker-log-ignorer",
+            "title": "IgnorerOptions",
+            "additionalProperties": false,
+            "type": "object",
+            "default": {},
+            "properties": {
+                "objectNames": {
+                    "description": "Specify the object names of the logger objects to be ignored. Defaults to [\"console\"]",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": ["console"]
+                }
+            }
+        }
+    }
+}

@@ -7,3 +7,5 @@
 /reports/
 # stryker temp files
 .stryker-tmp
+# packed library
+*.tgz
