@@ -92,7 +92,11 @@ export function createLogIgnorerFactory(): {
 }
 
 export const strykerPlugins = [
-    declareFactoryPlugin(PluginKind.Ignore, 'log-ignore', createLogIgnorerFactory()),
+    declareFactoryPlugin(
+        PluginKind.Ignore,
+        'log-ignore',
+        createLogIgnorerFactory(),
+    ),
 ]
 
 export const strykerValidationSchema: typeof import('../schema/log-ignorer-options.json') =
