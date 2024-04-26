@@ -1,6 +1,5 @@
 import { StrykerOptions } from '@stryker-mutator/api/core'
 import { Ignorer } from '@stryker-mutator/api/ignore'
-import { Logger } from '@stryker-mutator/api/logging'
 import {
     commonTokens,
     declareFactoryPlugin,
@@ -49,13 +48,11 @@ export interface LogIgnorerOptions extends StrykerOptions {
  * LogIgnorer provides functionality to ignore log calls for provides logger object names.
  */
 export class LogIgnorer implements Ignorer {
-    public static inject = [commonTokens.logger, commonTokens.options] as const
+    public static inject = [commonTokens.options] as const
     protected readonly options: LogIgnorerOptions
 
     constructor(
-        // eslint-disable-next-line @typescript-eslint/parameter-properties
-        private readonly log?: Logger,
-        options?: StrykerOptions,
+        options?: LogIgnorerOptions,
     ) {
         this.options = options as LogIgnorerOptions
     }
