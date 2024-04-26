@@ -1,5 +1,5 @@
 import { StrykerOptions } from '@stryker-mutator/api/core'
-import { Ignorer } from '@stryker-mutator/api/ignore'
+import { Ignorer, NodePath } from '@stryker-mutator/api/ignore'
 import {
     commonTokens,
     declareFactoryPlugin,
@@ -9,26 +9,6 @@ import {
     tokens,
 } from '@stryker-mutator/api/plugin'
 import fs from 'node:fs'
-
-/**
- * We define the necessary functions and fields for NodePath to be able to provide type safety
- * in our code.
- */
-export interface NodePath {
-    isExpressionStatement(): boolean
-    node: {
-        expression: {
-            type: string
-            callee: {
-                type: string
-                object: {
-                    type: string
-                    name: string
-                }
-            }
-        }
-    }
-}
 
 /**
  * Configuration for @sgohlke/stryker-log-ignorer
