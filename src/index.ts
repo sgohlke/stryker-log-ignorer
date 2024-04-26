@@ -49,16 +49,16 @@ export interface LogIgnorerOptions extends StrykerOptions {
  */
 export class LogIgnorer implements Ignorer {
     public static inject = [commonTokens.options] as const
-    protected readonly options: LogIgnorerOptions
+    protected readonly options: IgnorerOptions | undefined
 
     constructor(
-        options?: LogIgnorerOptions,
+        options?: Partial<LogIgnorerOptions>,
     ) {
-        this.options = options as LogIgnorerOptions
+        this.options = options?.logignore
     }
 
     shouldIgnore(path: NodePath): string | undefined {
-        const loggerObjectNames = this.options?.logignore?.objectNames ?? [
+        const loggerObjectNames = this.options?.objectNames ?? [
             'console',
         ]
         if (
