@@ -41,7 +41,7 @@ export interface IgnorerOptions {
 }
 
 export interface LogIgnorerOptions extends StrykerOptions {
-    logignore: IgnorerOptions
+    logignore?: IgnorerOptions
 }
 
 /*
