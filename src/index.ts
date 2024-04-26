@@ -1,11 +1,11 @@
 import { StrykerOptions } from '@stryker-mutator/api/core'
 import { Ignorer, NodePath } from '@stryker-mutator/api/ignore'
 import {
-    commonTokens,
-    declareFactoryPlugin,
     Injector,
     PluginContext,
     PluginKind,
+    commonTokens,
+    declareFactoryPlugin,
     tokens,
 } from '@stryker-mutator/api/plugin'
 import fs from 'node:fs'
