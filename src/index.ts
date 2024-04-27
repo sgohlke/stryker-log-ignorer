@@ -51,16 +51,12 @@ export class LogIgnorer implements Ignorer {
     public static inject = [commonTokens.options] as const
     protected readonly options?: IgnorerOptions
 
-    constructor(
-        options?: Partial<LogIgnorerOptions>,
-    ) {
+    constructor(options?: Partial<LogIgnorerOptions>) {
         this.options = options?.logignore
     }
 
     shouldIgnore(path: NodePath): string | undefined {
-        const loggerObjectNames = this.options?.objectNames ?? [
-            'console',
-        ]
+        const loggerObjectNames = this.options?.objectNames ?? ['console']
         if (
             path.isExpressionStatement() &&
             path.node.expression.type === 'CallExpression' &&
