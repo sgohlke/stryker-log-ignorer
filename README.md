@@ -14,7 +14,7 @@ TypeScript declarations are provided within the project.
 
 In order to use the plugin you have to add it as **ignorer** and add both the **@stryker-mutator** and **@sgohlke/stryker-log-ignorer** plugins to the Stryker configuration file.
 
-In the optional **loginore** option you can define the object names (i.e. the name of the variable/constant, NOT the name of a Logger class or interface) to be ignored. If no **loginore** option is provided **console** calls will be ignored.
+In the optional **logignore** option you can define the object names (i.e. the name of the variable/constant, NOT the name of a Logger class or interface) to be ignored. If no **logignore** option is provided **console** calls will be ignored.
 
 ```json
 {

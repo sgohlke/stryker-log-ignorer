@@ -46,7 +46,7 @@ export interface LogIgnorerOptions extends StrykerOptions {
 }
 
 /*
- * LogIgnorer provides functionality to ignore log calls for provides logger object names.
+ * LogIgnorer provides functionality to ignore log calls for provided logger object names.
  */
 export class LogIgnorer implements Ignorer {
     public static inject = [commonTokens.logger, commonTokens.options] as const
