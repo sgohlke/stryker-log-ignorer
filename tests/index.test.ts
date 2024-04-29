@@ -46,9 +46,7 @@ describe('LogIgnorer.shouldIgnore', () => {
     })
 })
 
-function parseExpressionStatement(
-    sourceCode: string,
-): NodePath {
+function parseExpressionStatement(sourceCode: string): NodePath {
     const ast = parser.parse(sourceCode, { sourceType: 'module' })
 
     let statementPath: NodePath | undefined

@@ -1,6 +1,6 @@
 {
     "name": "@sgohlke/stryker-log-ignorer",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "description": "Log Ignorer for Stryker",
     "scripts": {
         "build": "tsup-node",
