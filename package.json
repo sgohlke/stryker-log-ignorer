@@ -44,7 +44,7 @@
         "@babel/parser": "7.24.5",
         "@babel/traverse": "7.24.5",
         "@types/babel__core": "7.20.5",
-        "@types/node": "20.12.7",
+        "@types/node": "20.12.8",
         "@vitest/coverage-v8": "1.5.3",
         "eslint-plugin-deprecation": "2.0.0",
         "eslint-plugin-import": "2.29.1",
