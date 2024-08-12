@@ -44,7 +44,7 @@
         "@babel/parser": "7.25.3",
         "@babel/traverse": "7.25.3",
         "@types/babel__core": "7.20.5",
-        "@types/node": "22.1.0",
+        "@types/node": "22.2.0",
         "@vitest/coverage-v8": "2.0.5",
         "eslint-plugin-deprecation": "3.0.0",
         "eslint-plugin-import": "2.29.1",
@@ -59,6 +59,6 @@
         "vitest": "2.0.5"
     },
     "dependencies": {
-        "@stryker-mutator/api": "8.4.0"
+        "@stryker-mutator/api": "8.5.0"
     }
 }
