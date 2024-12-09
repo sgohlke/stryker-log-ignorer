@@ -6,9 +6,12 @@
 /src/
 /tests/
 /test-report/
-.eslintrc.json
+.eslintignore
+.oxlintrc.json
+.prettierignore
 .prettierrc.json
+stryker-incremental.json
 stryker.config.json
-tsup.config.ts
 tsconfig.json
+tsup.config.ts
 vitest.config.ts
