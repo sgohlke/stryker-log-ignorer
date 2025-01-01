@@ -44,7 +44,7 @@
         "@babel/parser": "7.26.3",
         "@babel/traverse": "7.26.4",
         "@types/babel__core": "7.20.5",
-        "@types/node": "22.10.2",
+        "@types/node": "22.10.3",
         "@vitest/coverage-v8": "2.1.8",
         "oxlint": "0.15.4",
         "prettier": "3.4.2",
