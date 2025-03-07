@@ -45,14 +45,14 @@
         "@babel/traverse": "7.26.9",
         "@types/babel__core": "7.20.5",
         "@types/node": "22.13.9",
-        "@vitest/coverage-v8": "3.0.7",
+        "@vitest/coverage-v8": "3.0.8",
         "oxlint": "0.15.13",
         "prettier": "3.5.3",
         "prettier-plugin-organize-imports": "4.1.0",
         "tsup": "8.4.0",
         "typescript": "5.8.2",
         "vite-tsconfig-paths": "5.1.4",
-        "vitest": "3.0.7"
+        "vitest": "3.0.8"
     },
     "dependencies": {
         "@stryker-mutator/api": "8.7.1"
