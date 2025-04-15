@@ -13,21 +13,21 @@ import fs from 'node:fs'
 /**
  * Configuration for @sgohlke/stryker-log-ignorer
  */
-export interface IgnorerOptions {
+interface IgnorerOptions {
     /**
      * Specify the object names of the logger objects to be ignored. Defaults to ["console"]
      */
     objectNames?: string[]
 }
 
-export interface LogIgnorerOptions extends StrykerOptions {
+interface LogIgnorerOptions extends StrykerOptions {
     logignore?: IgnorerOptions
 }
 
 /*
  * LogIgnorer provides functionality to ignore log calls for provided logger object names.
  */
-export class LogIgnorer implements Ignorer {
+class LogIgnorer implements Ignorer {
     public static inject = [commonTokens.options] as const
     protected readonly options?: IgnorerOptions
 
@@ -51,20 +51,18 @@ export class LogIgnorer implements Ignorer {
 
 logIgnorerFactory.inject = tokens(commonTokens.injector)
 
-export function logIgnorerFactory(
-    injector: Injector<PluginContext>,
-): LogIgnorer {
+function logIgnorerFactory(injector: Injector<PluginContext>): LogIgnorer {
     return injector.injectClass(LogIgnorer)
 }
 
-export function createLogIgnorerFactory(): {
+function createLogIgnorerFactory(): {
     (injector: Injector<PluginContext>): LogIgnorer
     inject: ['$injector']
 } {
     return logIgnorerFactory
 }
 
-export const strykerPlugins = [
+const strykerPlugins = [
     declareFactoryPlugin(
         PluginKind.Ignore,
         'log-ignore',
@@ -72,7 +70,7 @@ export const strykerPlugins = [
     ),
 ]
 
-export const strykerValidationSchema: typeof import('../schema/log-ignorer-options.json') =
+const strykerValidationSchema: typeof import('../schema/log-ignorer-options.json') =
     JSON.parse(
         // eslint-disable-next-line security/detect-non-literal-fs-filename
         fs.readFileSync(
@@ -80,3 +78,13 @@ export const strykerValidationSchema: typeof import('../schema/log-ignorer-optio
             'utf8',
         ),
     )
+
+export {
+    IgnorerOptions,
+    LogIgnorer,
+    LogIgnorerOptions,
+    createLogIgnorerFactory,
+    logIgnorerFactory,
+    strykerPlugins,
+    strykerValidationSchema,
+}
