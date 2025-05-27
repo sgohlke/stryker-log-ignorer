@@ -1,8 +1,9 @@
-import { LogIgnorer, LogIgnorerOptions } from '@/index'
-
+import { LogIgnorer } from '@/index'
+// eslint-disable-next-line @typescript-eslint/no-duplicate-imports
+import type { LogIgnorerOptions } from '@/index'
 import parser from '@babel/parser'
 import traverse from '@babel/traverse'
-import { NodePath } from '@stryker-mutator/api/ignore'
+import type { NodePath } from '@stryker-mutator/api/ignore'
 import { describe, expect, test } from 'vitest'
 
 describe('LogIgnorer.shouldIgnore', () => {
