@@ -1,13 +1,14 @@
-import { StrykerOptions } from '@stryker-mutator/api/core'
-import { Ignorer, NodePath } from '@stryker-mutator/api/ignore'
+import type { StrykerOptions } from '@stryker-mutator/api/core'
+import type { Ignorer, NodePath } from '@stryker-mutator/api/ignore'
 import {
-    Injector,
-    PluginContext,
     PluginKind,
     commonTokens,
     declareFactoryPlugin,
     tokens,
 } from '@stryker-mutator/api/plugin'
+// eslint-disable-next-line @typescript-eslint/no-duplicate-imports
+import type { Injector, PluginContext } from '@stryker-mutator/api/plugin'
+
 import fs from 'node:fs'
 
 /**
@@ -70,6 +71,7 @@ const strykerPlugins = [
     ),
 ]
 
+// eslint-disable-next-line @typescript-eslint/consistent-type-imports
 const strykerValidationSchema: typeof import('../schema/log-ignorer-options.json') =
     JSON.parse(
         // eslint-disable-next-line security/detect-non-literal-fs-filename
@@ -80,11 +82,10 @@ const strykerValidationSchema: typeof import('../schema/log-ignorer-options.json
     )
 
 export {
-    IgnorerOptions,
     LogIgnorer,
-    LogIgnorerOptions,
     createLogIgnorerFactory,
     logIgnorerFactory,
     strykerPlugins,
     strykerValidationSchema,
 }
+export type { IgnorerOptions, LogIgnorerOptions }
