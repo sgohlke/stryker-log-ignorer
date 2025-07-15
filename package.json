@@ -43,7 +43,7 @@
     "devDependencies": {
         "@babel/parser": "7.28.0",
         "@babel/traverse": "7.28.0",
-        "@swc/core": "1.12.11",
+        "@swc/core": "1.12.14",
         "@types/babel__core": "7.20.5",
         "@types/node": "24.0.13",
         "@vitest/coverage-v8": "3.2.4",
