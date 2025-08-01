@@ -51,7 +51,7 @@
         "prettier": "3.6.2",
         "prettier-plugin-organize-imports": "4.2.0",
         "tsup": "8.5.0",
-        "typescript": "5.8.3",
+        "typescript": "5.9.2",
         "vite-tsconfig-paths": "5.1.4",
         "vitest": "3.2.4"
     },
