@@ -41,8 +41,8 @@
     },
     "homepage": "https://github.com/sgohlke/stryker-log-ignorer#readme",
     "devDependencies": {
-        "@babel/parser": "7.28.0",
-        "@babel/traverse": "7.28.0",
+        "@babel/parser": "7.28.3",
+        "@babel/traverse": "7.28.3",
         "@swc/core": "1.13.3",
         "@types/babel__core": "7.20.5",
         "@types/node": "24.2.1",
