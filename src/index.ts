@@ -1,13 +1,13 @@
 import type { StrykerOptions } from '@stryker-mutator/api/core'
 import type { Ignorer, NodePath } from '@stryker-mutator/api/ignore'
+// eslint-disable-next-line @typescript-eslint/no-duplicate-imports
+import type { Injector, PluginContext } from '@stryker-mutator/api/plugin'
 import {
     PluginKind,
     commonTokens,
     declareFactoryPlugin,
     tokens,
 } from '@stryker-mutator/api/plugin'
-// eslint-disable-next-line @typescript-eslint/no-duplicate-imports
-import type { Injector, PluginContext } from '@stryker-mutator/api/plugin'
 
 import fs from 'node:fs'
 
