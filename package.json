@@ -1,6 +1,6 @@
 {
     "name": "@sgohlke/stryker-log-ignorer",
-    "version": "2.0.4",
+    "version": "2.0.5",
     "description": "Log Ignorer for Stryker",
     "scripts": {
         "build": "tsup-node",
@@ -43,11 +43,11 @@
     "devDependencies": {
         "@babel/parser": "7.28.4",
         "@babel/traverse": "7.28.4",
-        "@swc/core": "1.13.5",
+        "@swc/core": "1.13.20",
         "@types/babel__core": "7.20.5",
-        "@types/node": "24.6.2",
+        "@types/node": "24.7.2",
         "@vitest/coverage-v8": "3.2.4",
-        "oxlint": "1.19.0",
+        "oxlint": "1.22.0",
         "prettier": "3.6.2",
         "prettier-plugin-organize-imports": "4.3.0",
         "tsup": "8.5.0",
