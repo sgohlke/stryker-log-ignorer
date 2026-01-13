@@ -41,19 +41,19 @@
     },
     "homepage": "https://github.com/sgohlke/stryker-log-ignorer#readme",
     "devDependencies": {
-        "@babel/parser": "7.28.5",
-        "@babel/traverse": "7.28.5",
+        "@babel/parser": "7.28.6",
+        "@babel/traverse": "7.28.6",
         "@swc/core": "1.15.8",
         "@types/babel__core": "7.20.5",
-        "@types/node": "25.0.6",
-        "@vitest/coverage-v8": "4.0.16",
-        "oxlint": "1.38.0",
+        "@types/node": "25.0.7",
+        "@vitest/coverage-v8": "4.0.17",
+        "oxlint": "1.39.0",
         "prettier": "3.7.4",
         "prettier-plugin-organize-imports": "4.3.0",
         "tsup": "8.5.0",
         "typescript": "5.9.3",
         "vite-tsconfig-paths": "6.0.4",
-        "vitest": "4.0.16"
+        "vitest": "4.0.17"
     },
     "dependencies": {
         "@stryker-mutator/api": "9.4.0"
