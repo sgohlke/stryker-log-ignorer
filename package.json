@@ -43,11 +43,11 @@
     "devDependencies": {
         "@babel/parser": "7.28.6",
         "@babel/traverse": "7.28.6",
-        "@swc/core": "1.15.8",
+        "@swc/core": "1.15.10",
         "@types/babel__core": "7.20.5",
         "@types/node": "25.0.9",
         "@vitest/coverage-v8": "4.0.17",
-        "oxlint": "1.39.0",
+        "oxlint": "1.41.0",
         "prettier": "3.8.0",
         "prettier-plugin-organize-imports": "4.3.0",
         "tsup": "8.5.0",
