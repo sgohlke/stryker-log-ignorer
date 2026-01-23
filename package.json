@@ -46,14 +46,14 @@
         "@swc/core": "1.15.10",
         "@types/babel__core": "7.20.5",
         "@types/node": "25.0.10",
-        "@vitest/coverage-v8": "4.0.17",
+        "@vitest/coverage-v8": "4.0.18",
         "oxlint": "1.41.0",
         "prettier": "3.8.1",
         "prettier-plugin-organize-imports": "4.3.0",
         "tsup": "8.5.0",
         "typescript": "5.9.3",
         "vite-tsconfig-paths": "6.0.4",
-        "vitest": "4.0.17"
+        "vitest": "4.0.18"
     },
     "dependencies": {
         "@stryker-mutator/api": "9.4.0"
