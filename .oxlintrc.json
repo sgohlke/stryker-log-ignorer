@@ -52,6 +52,7 @@
         "import/no-default-export": "error",
         "import/no-dynamic-require": "error",
         "import/no-named-export": "off",
+        "import/no-nodejs-modules": "off",
         "import/unambiguous": "error",
         "jsdoc/empty-tags": "error",
         "oxc/bad-bitwise-operator": "error",
