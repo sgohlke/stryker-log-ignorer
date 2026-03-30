@@ -6,21 +6,21 @@
 version: 2
 updates:
   # Maintain dependencies for GitHub Actions
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "weekly"
-      day: "friday"
-      time: "09:00"
+      interval: 'weekly'
+      day: 'friday'
+      time: '09:00'
 
   # Maintain dependencies for npm
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "daily"
-      time: "03:45"
-      timezone: "Europe/Berlin"
+      interval: 'daily'
+      time: '03:45'
+      timezone: 'Europe/Berlin'
     groups:
       dev-dependencies:
         patterns:
-          - "*"
+          - '*'

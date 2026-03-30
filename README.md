@@ -18,11 +18,11 @@ In the optional **logignore** option you can define the object names (i.e. the n
 
 ```json
 {
-    "ignorers": ["log-ignore"],
-    "plugins": ["@stryker-mutator/*", "@sgohlke/stryker-log-ignorer"],
-    "logignore": {
-        "objectNames": ["console", "logger"]
-    }
+  "ignorers": ["log-ignore"],
+  "plugins": ["@stryker-mutator/*", "@sgohlke/stryker-log-ignorer"],
+  "logignore": {
+    "objectNames": ["console", "logger"]
+  }
 }
 ```
 
@@ -35,10 +35,10 @@ Example code:
 ```typescript
 import { MyFavoriteLogger } from 'some-logger-module'
 export function doSomething(): void {
-    const logger = new MyFavoriteLogger('loggername')
-    console.log('We do something here!')
-    // Some imaginary code here!
-    logger.info('We finished doing something!')
+  const logger = new MyFavoriteLogger('loggername')
+  console.log('We do something here!')
+  // Some imaginary code here!
+  logger.info('We finished doing something!')
 }
 ```
 
