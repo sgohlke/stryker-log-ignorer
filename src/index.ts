@@ -32,12 +32,13 @@ class LogIgnorer implements Ignorer {
 
   shouldIgnore(path: NodePath): string | undefined {
     const loggerObjectNames = this.options?.objectNames ?? ['console']
+    const { node } = path
     if (
-      path.isExpressionStatement() &&
-      path.node.expression.type === 'CallExpression' &&
-      path.node.expression.callee.type === 'MemberExpression' &&
-      path.node.expression.callee.object.type === 'Identifier' &&
-      loggerObjectNames.includes(path.node.expression.callee.object.name)
+      node.type === 'ExpressionStatement' &&
+      node.expression.type === 'CallExpression' &&
+      node.expression.callee.type === 'MemberExpression' &&
+      node.expression.callee.object.type === 'Identifier' &&
+      loggerObjectNames.includes(node.expression.callee.object.name)
     ) {
       return `We are not interested in testing ${loggerObjectNames} statements.`
     }
@@ -61,8 +62,7 @@ const strykerPlugins = [
   declareFactoryPlugin(PluginKind.Ignore, 'log-ignore', createLogIgnorerFactory()),
 ]
 
-// eslint-disable-next-line @typescript-eslint/consistent-type-imports
-const strykerValidationSchema: typeof import('../schema/log-ignorer-options.json') = JSON.parse(
+const strykerValidationSchema: Record<string, unknown> = JSON.parse(
   // eslint-disable-next-line security/detect-non-literal-fs-filename
   fs.readFileSync(new URL('../schema/log-ignorer-options.json', import.meta.url), 'utf8'),
 )
