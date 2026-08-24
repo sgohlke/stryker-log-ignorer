@@ -1,6 +1,6 @@
 {
   "name": "@sgohlke/stryker-log-ignorer",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Log Ignorer for Stryker",
   "keywords": [
     "Log Ignorer",
@@ -41,7 +41,7 @@
     "test": "vitest run --coverage"
   },
   "dependencies": {
-    "@stryker-mutator/api": "9.6.1"
+    "@stryker-mutator/api": "10.0.0"
   },
   "devDependencies": {
     "@babel/parser": "8.0.4",
