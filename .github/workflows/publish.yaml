@@ -24,7 +24,7 @@ jobs:
           node-version: '24.x'
           registry-url: https://registry.npmjs.org/
       - name: Install dependencies
-        run: npm install --ignore-scripts
+        run: npm ci --ignore-scripts
       - name: Check for formatting issues
         run: npm run checkformat
       - name: Check for linting issues
@@ -49,7 +49,7 @@ jobs:
         with:
           node-version: '24.x'
           registry-url: https://registry.npmjs.org/
-      - run: npm i --ignore-scripts
+      - run: npm ci --ignore-scripts
       - run: npm publish --provenance --access public
 
   publish-jsr:
@@ -68,6 +68,6 @@ jobs:
         with:
           node-version: '24.x'
           registry-url: https://registry.npmjs.org/
-      - run: npm i --ignore-scripts
+      - run: npm ci --ignore-scripts
       - run: npm run build
       - run: npx jsr publish
