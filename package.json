@@ -1,6 +1,6 @@
 {
   "name": "@sgohlke/stryker-log-ignorer",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Log Ignorer for Stryker",
   "keywords": [
     "Log Ignorer",
@@ -41,19 +41,19 @@
     "test": "vitest run --coverage"
   },
   "dependencies": {
-    "@stryker-mutator/api": "9.6.1"
+    "@stryker-mutator/api": "10.0.0"
   },
   "devDependencies": {
     "@babel/parser": "8.0.4",
     "@babel/traverse": "8.0.4",
     "@babel/types": "8.0.4",
-    "@swc/core": "1.15.43",
-    "@types/node": "26.1.1",
-    "@vitest/coverage-v8": "4.1.10",
-    "oxfmt": "0.58.0",
-    "oxlint": "1.73.0",
-    "tsdown": "0.22.5",
+    "@swc/core": "1.16.1",
+    "@types/node": "26.2.0",
+    "@vitest/coverage-v8": "4.1.11",
+    "oxfmt": "0.65.0",
+    "oxlint": "1.80.0",
+    "tsdown": "0.22.14",
     "typescript": "7.0.2",
-    "vitest": "4.1.10"
+    "vitest": "4.1.11"
   }
 }

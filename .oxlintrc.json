@@ -42,6 +42,7 @@
     "eslint/max-nested-callbacks": ["error", 5],
     "eslint/no-magic-numbers": "off",
     "eslint/no-ternary": "off",
+    "eslint/one-var": "off",
     "eslint/sort-imports": "off",
     "eslint/yoda": "off",
     "import/exports-last": "off",
