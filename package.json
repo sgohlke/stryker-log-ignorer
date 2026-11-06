@@ -44,16 +44,16 @@
     "@stryker-mutator/api": "10.1.1"
   },
   "devDependencies": {
-    "@babel/parser": "8.0.8",
-    "@babel/traverse": "8.0.7",
-    "@babel/types": "8.0.8",
-    "@swc/core": "1.16.20",
-    "@types/node": "26.6.5",
-    "@vitest/coverage-v8": "5.0.5",
-    "oxfmt": "0.74.0",
-    "oxlint": "1.89.0",
-    "tsdown": "0.23.2",
+    "@babel/parser": "8.1.0",
+    "@babel/traverse": "8.1.0",
+    "@babel/types": "8.1.0",
+    "@swc/core": "1.16.21",
+    "@types/node": "26.6.6",
+    "@vitest/coverage-v8": "5.1.0",
+    "oxfmt": "0.75.0",
+    "oxlint": "1.90.0",
+    "tsdown": "0.23.4",
     "typescript": "7.0.2",
-    "vitest": "5.0.5"
+    "vitest": "5.1.0"
   }
 }
