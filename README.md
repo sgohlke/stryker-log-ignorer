@@ -1,5 +1,8 @@
 # stryker-log-ignorer
 
+**Deprecation warning:**
+This package is no longer maintained, please use at your own risk!
+
 Log ignorer plugin for [Stryker][1] JS/TS. Provides functionality to ignore logger calls in Stryker if you do not want to mutation test these logger calls.
 
 ## Install
